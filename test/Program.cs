@@ -77,7 +77,7 @@ builder.Services.AddHangfire(config =>
               DisableGlobalLocks = true
           });
 
-});
+}); 
 
 
 // 2. ±Ò°Ê Hangfire Server

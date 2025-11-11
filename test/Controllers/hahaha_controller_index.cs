@@ -3,6 +3,7 @@ using AutoMapper;
 using Emgu.CV.Face;
 using Emgu.CV.Features2D;
 using Emgu.CV.Ocl;
+using ha_def;
 using Hangfire;
 using Hangfire.Common;
 using Hangfire.States;
@@ -458,7 +459,7 @@ namespace asp_base.Controllers
         [HttpPost("login")]
         public IActionResult Login(IConfiguration config)
         {
-            string rerr = config.GetSection("Jwt")["SecretKey"];
+            string rerr = config.GetSection(key_app_setting.JWT)["SecretKey"]!;
             var token = GenerateToken("hahaha", config);
 
             return Ok(token);

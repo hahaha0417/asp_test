@@ -14,6 +14,8 @@ namespace asp_base
 
         public static ILogger? Log_Program = null;
         public static hahaha_setting_box? Setting = null;
+
+        public static hahaha_config? Config_ = null;
     }
 
     // ---------------------------------------------------------------
@@ -74,6 +76,7 @@ namespace asp_base
         //
         // ---------------------------------------------------------------
         public static hahaha_setting_box? Setting_Box_ = null;
+        public static hahaha_config? Config_ = null;
         // ---------------------------------------------------------------
         //
         // ---------------------------------------------------------------
@@ -117,6 +120,10 @@ namespace asp_base
 
         public static int Initial()
         {
+            Config_ = new hahaha_config();
+            Config_.Initial();
+
+            ha.Config_ = Config_;
             return 0;
         }
 
