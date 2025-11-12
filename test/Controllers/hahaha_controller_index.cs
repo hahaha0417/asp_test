@@ -366,6 +366,7 @@ namespace asp_base.Controllers
         [HttpPost("test_post")]
         public IActionResult Test_Post()
         {
+            //var id = HttpContext.Request.Query["id"].ToString();
             var id = HttpContext.Request.Form["id"].ToString();
 
             //var options = new JsonSerializerOptions

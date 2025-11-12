@@ -204,6 +204,25 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = "docs"; // Swagger UI 的路徑
 });
 
+//var adminRouter = app.MapWhen(ctx => ctx.Request.Path.StartsWithSegments("/admin"), ConfigureAdmin);
+//void ConfigureAdmin(IApplicationBuilder adminApp)
+//{
+//    adminApp.Use(async (ctx, next) =>
+//    {
+//        Console.WriteLine("進入 Admin 區域");
+//        await next();
+//    });
+
+//    adminApp.UseRouting();
+//    adminApp.UseEndpoints(endpoints =>
+//    {
+//        endpoints.MapControllerRoute(
+//            name: "admin",
+//            pattern: "admin/{controller=Dashboard}/{action=Index}/{id?}");
+//    });
+//}
+
+
 app.Run();
 
 
